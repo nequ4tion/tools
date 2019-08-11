@@ -1,0 +1,7 @@
+[package]
+name = "linux_standby"
+version = "0.1.0"
+authors = ["Nequ4tion <nequ4tion@gmail.com>"]
+edition = "2018"
+
+[dependencies]
