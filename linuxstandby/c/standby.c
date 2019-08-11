@@ -19,13 +19,13 @@ main(int argc, const char *const *argv)
         fprintf(stderr, COULD_NOT_WRITE_ERROR, POWER_STATE, strerror(errno));
         return 1;
     }
-   bytes_written = fwrite(POWER_STATE_VALUE, sizeof(char), sizeof(POWER_STATE_VALUE), power_state_file);
+    bytes_written = fwrite(POWER_STATE_VALUE, sizeof(char), sizeof(POWER_STATE_VALUE), power_state_file);
 
-   if (bytes_written != sizeof(POWER_STATE_VALUE)) {
+    if (bytes_written != sizeof(POWER_STATE_VALUE)) {
        fprintf(stderr, "Could not complete the write to %s: %s", POWER_STATE_VALUE, strerror(errno));
        fclose(power_state_file);
        return 1;
-   }
-   return 0;
+    }
+    return 0;
 }
 
