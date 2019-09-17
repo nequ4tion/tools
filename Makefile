@@ -1,6 +1,10 @@
-BINARIES=`pwd`/linuxstandby/c/standby `pwd`/linuxstandby/linux_standby/standby `pwd`/linuxstandby/linux_standby/target
+BINARIES=`pwd`/linuxstandby/c/standby `pwd`/linuxstandby/linux_standby/standby `pwd`/linuxstandby/linux_standby/target `pwd`/brightness/brightness
 
-all: linuxstandby
+all: linuxstandby brightness
+
+brightness:
+	@make -C brightness
+	@echo "Binary ready at `pwd`/brightness/brightness"
 
 linuxstandby: linuxstandby-c linuxstandby-rust
 
